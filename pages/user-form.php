@@ -1,12 +1,4 @@
 <?php
-function cleanInput($input) {
-    $input = htmlspecialchars($input);
-    $input = strip_tags($input);
-    $input = trim($input);
-
-    return $input;
-}
-
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $username = cleanInput($_POST['username']);
     $email = cleanInput($_POST['email']);

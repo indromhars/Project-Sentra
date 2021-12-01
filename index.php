@@ -27,6 +27,14 @@ try {
         return isset ($_SESSION["id"]);
     }
 
+    function cleanInput($input) {
+        $input = htmlspecialchars($input);
+        $input = strip_tags($input);
+        $input = trim($input);
+
+        return $input;
+    }
+
     require 'pages/template.php';
 
 } catch(PDOException $e) {
