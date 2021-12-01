@@ -8,7 +8,6 @@ $user_id = $_SESSION['id'];
 $user = runQuery("select * from users where id=$user_id");
 $user = $user->fetchAll(PDO::FETCH_CLASS);
 
-
 ?>
 
 <div class="w-1/2 mx-auto mt-8">

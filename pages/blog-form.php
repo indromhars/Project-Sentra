@@ -2,9 +2,10 @@
 if($_SERVER['REQUEST_METHOD'] === 'POST'){
     $blogtitle = cleanInput($_POST['blogtitle']);
     $blog = cleanInput($_POST['blog']);
+    $user_id = $_SESSION['id'];
 
-    $query = "insert into blogs (blogtitle, blog) values (?, ?)";
-    $parameters = [$blogtitle, $blog];
+    $query = "insert into blogs (blogtitle, blog, user_id) values (?, ?, ?)";
+    $parameters = [$blogtitle, $blog, $user_id];
     $ex = runQuery($query, $parameters);
 
     if ($ex) {
@@ -23,7 +24,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
 
     <div class="w-full mt-2">
         <label class="font-bold block">Content</label>
-        <textarea name="blog" placeholder="Content..." class="border rounded-md p-2 mt-2 w-full" cols="30" rows="10"></textarea>
+        <textarea name="blog" placeholder="Content..." class="border rounded-md p-2 mt-2 w-full" cols="30" rows="10" required></textarea>
     </div>
 
     <button type="submit" class="bg-blue-600 font-bold text-white p-4 rounded mt-8 w-full">Submit</button>
@@ -40,3 +41,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
         </div>
     <?php } ?>
 </form>
+
+<?php
+unset($_SESSION['success_form']);
+unset($_SESSION['failed_form']);
