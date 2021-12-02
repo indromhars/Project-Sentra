@@ -19,7 +19,6 @@ $user = $user->fetchAll(PDO::FETCH_CLASS);
         <tr>
             <th class="p-2">Username</th>
             <th class="p-2">Email</th>
-<!--            <th class="p-2">Password</th>-->
         </tr>
         <?php foreach ($user as $u){?>
         <tr>
