@@ -25,7 +25,6 @@ $user = $user->fetchAll(PDO::FETCH_CLASS);
         <tr>
             <td class="border p-2"><?= $u->username; ?></td>
             <td class="border p-2"><?= $u->email; ?></td>
-<!--            <td class="border p-2">--><?//=  ?><!--</td>-->
             <td class="border p-2">
                 <a href="index.php?page=user-form&id=<?= $u->id; ?>" class="mt-5 p-2 bg-purple-600 font-bold text-white rounded">Update</a>
                 <button class="p-2 text-red-700 font-bold" onclick="deleteData(<?= $u->id; ?>)">Delete</button>
