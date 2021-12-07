@@ -14,6 +14,7 @@
             <a href="index.php?page=home" class="text-blue-600 px-4 font-bold">Home</a>
             <a href="index.php?page=profile" class="text-blue-600 px-4 font-bold">Profile</a>
             <a href="index.php?page=blog-form" class="text-blue-600 px-4 font-bold">Make a Blog</a>
+            <a href="index.php?page=blog-history" class="text-blue-600 px-4 font-bold">Your Blogs</a>
             <a href="index.php?page=logout" class="text-blue-600 px-4 font-bold">Logout</a>
         <?php } else {?>
             <a href="index.php?page=user-form" class="text-blue-600 px-4 font-bold">Sign Up</a>

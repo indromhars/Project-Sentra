@@ -1,6 +1,6 @@
 <?php
 
-$blog = runQuery("select blogs.*, users.username from blogs inner join users on blogs.user_id=users.id");
+$blog = runQuery("select blogs.*, users.username from blogs inner join users on blogs.user_id=users.id where blogs.status=1");
 $blog = $blog->fetchAll(PDO::FETCH_CLASS);
 
 ?>
